@@ -2,10 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import './styles/main.scss';
+
+import { DataProvider } from "./context/DataContext";
+import { CharactersProvider } from "./context/CharactersContext";
+import { SeasonsProvider } from "./context/SeasonsContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DataProvider>
+      <CharactersProvider>
+        <SeasonsProvider>
+          <App />
+        </SeasonsProvider>
+      </CharactersProvider>
+    </DataProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

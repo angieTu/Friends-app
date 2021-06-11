@@ -7,6 +7,7 @@ const DataProvider = ({ children }) => {
   const [lastDate, setLastDate] = useState("");
   const [name, setName] = useState("");
   const [logo, setLogo] = useState("");
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     const getData = async () => {
@@ -16,12 +17,13 @@ const DataProvider = ({ children }) => {
       setLastDate(data.data[0].lastDate);
       setName(data.data[0].name);
       setLogo(data.data[0].logo);
+      setImage(data.data[0].image)
     };
     getData();
   }, []);
 
   return (
-    <DataContext.Provider value={{ firstDate, lastDate, name, logo }}>
+    <DataContext.Provider value={{ firstDate, lastDate, name, logo, image }}>
       {children}
     </DataContext.Provider>
   );

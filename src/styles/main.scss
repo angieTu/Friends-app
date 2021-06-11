@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Friends";
+    src: url('../GABRWFFR.TTF');
+}
+
+@import "./pages/home";
+
+@import './components/header';
+@import './components/footer';
+@import  './elements/link';
+

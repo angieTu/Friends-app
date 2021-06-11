@@ -1,0 +1,32 @@
+.footer {
+    height: 100px;
+    font-family: "Friends";
+    background-color: #000000b8;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+
+    .footer-content {
+        color: white;
+        & a {
+          color: red;
+        }
+      }
+    
+      .contact-details {
+        & a {
+          margin: 0 5px 0 5px;
+        }
+        }
+    
+        .footer-icon {
+          width: 40px;
+          color: lightseagreen;
+          cursor: pointer;
+          transition: 0.3s;
+          &.github-icon {
+            width: 30px;
+            color: yellow;
+          }
+        }
+}

@@ -1,26 +1,36 @@
+import {BrowserRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom'
+
 import Container from "../src/components/primitives/Container";
+import Header from '../src/components/Header';
 
 import Home from "../src/pages/Home";
+import Footer from '../src/components/Footer';
 import Characters from "../src/pages/Characters";
 import Seasons from "../src/pages/Seasons";
-
-import { DataProvider } from "../src/context/DataContext";
-import { CharactersProvider } from "../src/context/CharactersContext";
-import { SeasonsProvider } from "../src/context/SeasonsContext";
+import Episodes from "../src/pages/Episodes"
 
 function App() {
   return (
-    <DataProvider>
-      <CharactersProvider>
-        <SeasonsProvider>
-          <Container className="App">
+    <>
+    <Router>
+      <Header />
+        <Switch>
+          <Route exact path='/'>
             <Home />
+          </Route>
+          <Route exact path='/characters'> 
             <Characters />
+          </Route>
+          <Route exact path='/seasons'>    
             <Seasons />
-          </Container>
-        </SeasonsProvider>
-      </CharactersProvider>
-    </DataProvider>
+          </Route>
+          <Route exact path='/episodes'>
+            <Episodes />
+          </Route>
+        </Switch>
+        <Footer />
+       </Router>
+    </>
   );
 }
 
