@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 
 import Container from "../components/primitives/Container";
+import Heading from '../components/primitives/Heading';
 
 import SeasonsContext from "../context/SeasonsContext";
 
@@ -11,8 +12,11 @@ const Seasons = () => {
       {seasons &&
         seasons.map((season) => (
           <Container>
-            <h1>{season.number}</h1>
-            <h2>{season.description}</h2>
+            <Heading>{season.number}</Heading>
+            <Heading>{season.description}</Heading>
+            <Heading>{season.air_date}</Heading>
+            <Heading>{season.last_air_date}</Heading>
+            <Heading>{season.numberEpisodes}</Heading>
           </Container>
         ))}
     </Container>

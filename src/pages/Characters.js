@@ -12,13 +12,13 @@ const Characters = () => {
   
   return (
     <Container className='characters-container'>
-      {characters.map((character) => (
+      {characters.map((character, index) => (
         <CardCharacter 
         img={character.image} 
         name={character.nameCharacter} 
         actor={character.name} 
         id={character._id} 
-        key={character._id}/>
+        key={index}/>
       ))}
     </Container>
   );

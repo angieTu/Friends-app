@@ -9,9 +9,9 @@ import Heading from './primitives/Heading'
 const CardCharacter = ({id, img, name, actor}) => {
     
     return (
-        <Container 
+        <Container  
         id={id}
-        key={id} 
+        as='article'
         className='character-container'>
             <Container className='img-container'>
                 <Image src={img} />
