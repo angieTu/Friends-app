@@ -8,7 +8,7 @@ const CharactersProvider = ({ children }) => {
   useEffect(() => {
     const getCharacters = async () => {
       const response = await fetch(
-        "https://api-friends.herokuapp.com/characters"
+        "https://api-friends.herokuapp.com/characters?limit=15"
       );
       const data = await response.json();
       setCharacters(data.data);

@@ -7,6 +7,8 @@ import Link from './primitives/Link';
 
 import DataContext from "../context/DataContext";
 
+import LogoImg from '../pngwing.com.png';
+
 
 const Header = () => {
     const { logo } = useContext(DataContext);
@@ -14,7 +16,7 @@ const Header = () => {
     return ( 
     <header className='header'> 
         <Container> 
-            <Image src={logo} />
+             <Image className='header-img' src={LogoImg} />
         </Container>
         <Container className='header-container'>
             <NavLink activeClassName='selected' to='/'>Home</NavLink>
@@ -23,7 +25,7 @@ const Header = () => {
             <NavLink activeClassName='selected' to='/episodes'>Episodes</NavLink>
         </Container>
         <Container>
-            <Link target='_blank' href='https://documenter.getpostman.com/view/12618304/TW6wJoZQ'>DOC</Link>
+            <Link target='_blank' href='https://documenter.getpostman.com/view/12618304/TW6wJoZQ'>DOCS</Link>
         </Container>
     </header>
     )

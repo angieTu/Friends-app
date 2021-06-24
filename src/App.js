@@ -1,6 +1,4 @@
-import {BrowserRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom'
-
-import Container from "../src/components/primitives/Container";
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from '../src/components/Header';
 
 import Home from "../src/pages/Home";

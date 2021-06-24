@@ -7,7 +7,7 @@ import SeasonsContext from "../context/SeasonsContext";
 const Seasons = () => {
   const { seasons } = useContext(SeasonsContext);
   return (
-    <Container>
+    <Container className='seasons-container'>
       {seasons &&
         seasons.map((season) => (
           <Container>

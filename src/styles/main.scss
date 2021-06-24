@@ -8,8 +8,13 @@ body {
 }
 
 @import "./pages/home";
+@import "./pages/characters";
+@import "./pages/seasons";
+@import "./pages/episodes";
 
 @import './components/header';
 @import './components/footer';
+@import './components/cardCharacter';
+
 @import  './elements/link';
 

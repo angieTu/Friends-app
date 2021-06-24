@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Link = ({...props}) => {
+const Link = ({children, ...props}) => {
     return (
-        <a {...props}></a>
+        <a {...props}>{children}</a>
     )
 }
 

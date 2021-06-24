@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
 import Container from "../components/primitives/Container";
-import Heading from "../components/primitives/Heading";
 import Image from "../components/primitives/Image";
+import Link from '../components/primitives/Link';
 
 import DataContext from "../context/DataContext";
 
@@ -13,7 +13,9 @@ const Home = () => {
     <Container className='home-container'>
       {/* <Heading className='home-title'>{name}</Heading> */}
       <Container className='images-container'>
-        <Image className='image-cast' src={image} />
+      <Link href='https://api-friends.herokuapp.com/info' target='_blank'> 
+        <Image className='image-cast' src={image} /> 
+      </Link>
       </Container>
     </Container>
   );
